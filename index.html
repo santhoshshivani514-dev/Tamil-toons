@@ -87,5 +87,36 @@ function watch(name){
  name+' video will be added here soon.';
 }
 </script>
+  <!-- Chhota Bheem Seasons --><section id="chhota-bheem-seasons" style="padding:20px;color:white;background:#202020;border-radius:12px;margin:20px 0;">
+  <h2>Chhota Bheem - Tamil</h2>
+  <p>Choose a Season</p>
+  <div id="season-buttons" style="display:flex;flex-wrap:wrap;gap:8px;">
+    <button onclick="showSeason(1)">Season 1</button>
+    <button onclick="showSeason(2)">Season 2</button>
+    <button onclick="showSeason(3)">Season 3</button>
+    <button onclick="showSeason(4)">Season 4</button>
+    <button onclick="showSeason(5)">Season 5</button>
+    <button onclick="showSeason(6)">Season 6</button>
+    <button onclick="showSeason(7)">Season 7</button>
+    <button onclick="showSeason(8)">Season 8</button>
+  </div>
+  <div id="episode-list" style="margin-top:20px;"></div>
+  <div id="episode-player" style="margin-top:16px;"></div>
+</section><script>
+function showSeason(season) {
+  const list = document.getElementById("episode-list");
+  const player = document.getElementById("episode-player");
+  player.innerHTML = "";
+  if (season === 3) {
+    list.innerHTML = '<h3>Season 3 Episodes</h3><button onclick="playEpisode1()">Episode 1</button>';
+  } else {
+    list.innerHTML = '<p>Season ' + season + ' episodes will be added soon.</p>';
+  }
+}
+function playEpisode1() {
+  document.getElementById("episode-player").innerHTML =
+    '<iframe width="100%" height="250" src="https://www.youtube.com/embed/ry6E3Mhr7AQ" title="Chhota Bheem Season 3 Episode 1" style="border:0;border-radius:12px" allowfullscreen></iframe>';
+}
+</script>
 </body>
 </html>
